@@ -2,13 +2,24 @@ package vp.vp;
 
 import java.util.Objects;
 
+import javax.persistence.*;
+
+@Entity
+
 public class Recibo {
-	
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int cod;
+	@Column(nullable = false)
 	private String produto;
+	@Column(nullable = false)
 	private int cont_produto;
+	@Column(nullable = false)
 	private String descricao;
+	@Column(nullable = false)
 	private String enviar_email;
+	@Column(nullable = false)
 	private int valor;	
 		
 	@Override
