@@ -1,15 +1,27 @@
 package vp.vp;
 
 import java.util.Objects;
+import javax.persistence.*;
+
+@Entity
 
 public class Pessoa_juridica {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int code;
+	@Column(nullable = false)
 	private String nome;
+	@Column(nullable = false)
 	private int telefone;
+	@Column(nullable = false)
 	private String endereco;
+	@Column(nullable = false)
 	private String email;
+	@Column(nullable = false)
 	private int cnpj;
+	@Column(nullable = false)
 	private String login;
+	@Column(nullable = false)
 	private String senha;
 	
 		

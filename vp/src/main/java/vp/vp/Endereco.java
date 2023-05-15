@@ -2,12 +2,20 @@ package vp.vp;
 
 import java.util.Objects;
 
+import javax.persistence.*;
+
+@Entity
 public class Endereco {
-	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private String rua;
+	@Column(nullable = false)
 	private String bairo;
+	@Column(nullable = false)
 	private int cep;
-	private String estado;	
+	@Column(nullable = false)
+	private String estado;
+	@Column(nullable = false)
 	
 	@Override
 	public String toString() {

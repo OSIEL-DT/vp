@@ -2,11 +2,19 @@ package vp.vp;
 
 import java.util.Objects;
 
+import javax.persistence.*;
+
+@Entity
 public class Form_pagamentos {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int code;
+	@Column(nullable = false)
 	private int cartao_credito_debito;
+	@Column(nullable = false)
 	private int transferencias_ted;
+	@Column(nullable = false)
 	private int pix;
 	
 	

@@ -1,11 +1,23 @@
 package vp.vp;
 
 import java.util.Objects;
+import javax.persistence.*;
+
+@Entity
 
 public class Aluguel_produtos {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int cod;
+
+	@Column(nullable = false)
 	private int data_retirada;
+	
+	@Column(nullable = false)
 	private int data_entrega;
+	
+	@Column(nullable = false)
 	private int valor;
 
 	@Override
@@ -64,5 +76,4 @@ public class Aluguel_produtos {
 				&& valor == other.valor;
 	}
 
-	
 }

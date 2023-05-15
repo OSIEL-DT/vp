@@ -1,13 +1,24 @@
 package vp.vp;
 
 import java.util.Objects;
+import javax.persistence.*;
+
+@Entity
 
 public class Empresa {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int cod;
+	@Column(nullable = false)
 	private String nome_empresa;
+	@Column(nullable = false)
 	private String endereco;
+	@Column(nullable = false)
 	private int cnpj;
+	@Column(nullable = false)
 	private int email;
+	@Column(nullable = false)
 	private int telefone;
 	
 		
