@@ -28,6 +28,7 @@ public class DaoGenerico<E> {
 	public List<E> listar(Class<E> entidade){
 		EntityTransaction transaction = entityManager.getTransaction();
 		transaction.begin();
+		@SuppressWarnings("unchecked")
 		List<E> lista = entityManager.createQuery("from "+entidade.getName()).getResultList();
 		transaction.commit();
 		return lista;

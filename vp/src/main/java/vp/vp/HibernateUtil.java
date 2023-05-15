@@ -14,18 +14,23 @@ public class HibernateUtil {
 	private static void init() {
 		try {
 			if (factory == null) {
-				factory = Persistence.createEntityManagerFactory("vp");
+				factory = Persistence.createEntityManagerFactory("projetoFinal"); 
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
-	public static EntityManager getEntityManager() {
-		return factory.createEntityManager();
+	public static EntityManagerFactory getFactory() {
+		return factory;
 	}
 
-	public static Object getPrimaryKey(Object entity) {
+	public static EntityManager getEntityManager() {
+		return factory.createEntityManager(); 
+	}
+
+	public static Object getPrimaryKey(Object entity) { 
 		return factory.getPersistenceUnitUtil().getIdentifier(entity);
 	}
+
 }
