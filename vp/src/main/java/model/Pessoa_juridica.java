@@ -24,6 +24,8 @@ public class Pessoa_juridica {
 	@Column(nullable = false)
 	private String senha;
 	
+	@ManyToOne(optional = false, fetch = FetchType.EAGER)
+	private Aluguel_produtos aluguel_produtos;
 		
 	@Override
 	public String toString() {

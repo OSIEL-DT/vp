@@ -17,6 +17,9 @@ public class Produtos {
 	private String tipo;
 	@Column(nullable = false)
 	private String descricao;
+	
+	@ManyToOne(optional = false, fetch = FetchType.EAGER)
+	private Aluguel_produtos aluguel_produtos;
 
 	@Override
 	public String toString() {

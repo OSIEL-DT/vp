@@ -1,5 +1,7 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import javax.persistence.*;
 
@@ -19,6 +21,12 @@ public class Aluguel_produtos {
 	
 	@Column(nullable = false)
 	private int valor;
+	
+	@OneToMany(mappedBy = "aluguel_produtos", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE, orphanRemoval = true)
+	private List<Empresa> empresa = new ArrayList<Empresa>();
+
+	@OneToMany(mappedBy = "aluguel_produtos", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE, orphanRemoval = true)
+	private List<Endereco> endereco = new ArrayList<Endereco>();
 	
 	
 	

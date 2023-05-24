@@ -21,6 +21,9 @@ public class Empresa {
 	@Column(nullable = false)
 	private int telefone;
 	
+	@ManyToOne(optional = false, fetch = FetchType.EAGER)
+	private Aluguel_produtos aluguel_produtos;
+	
 		
 	@Override
 	public String toString() {

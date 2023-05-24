@@ -22,6 +22,9 @@ public class Pessoa_fisica {
 	private String email;
 	@Column(nullable = false)
 	private int cpf;
+	
+	@ManyToOne(optional = false, fetch = FetchType.EAGER)
+	private Aluguel_produtos aluguel_produtos;
 
 	@Override
 	public String toString() {

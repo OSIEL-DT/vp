@@ -17,6 +17,9 @@ public class Endereco {
 	private String estado;
 	@Column(nullable = false)
 	
+	@ManyToOne(optional = false, fetch = FetchType.EAGER)
+	private Aluguel_produtos aluguel_produtos;
+	
 	@Override
 	public String toString() {
 		return "Endereco [rua=" + rua + ", bairo=" + bairo + ", cep=" + cep + ", estado=" + estado + "]";

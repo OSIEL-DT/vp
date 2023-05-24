@@ -20,7 +20,10 @@ public class Recibo {
 	@Column(nullable = false)
 	private String enviar_email;
 	@Column(nullable = false)
-	private int valor;	
+	private int valor;
+	
+	@ManyToOne(optional = false, fetch = FetchType.EAGER)
+	private Aluguel_produtos aluguel_produtos;
 		
 	@Override
 	public String toString() {

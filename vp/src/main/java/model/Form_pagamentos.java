@@ -17,7 +17,8 @@ public class Form_pagamentos {
 	@Column(nullable = false)
 	private int pix;
 	
-	
+	@ManyToOne(optional = false, fetch = FetchType.EAGER)
+	private Aluguel_produtos aluguel_produtos;
 	
 	@Override
 	public String toString() {
