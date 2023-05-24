@@ -1,4 +1,4 @@
-package vp.vp;
+package model;
 
 /**
  * Hello world!

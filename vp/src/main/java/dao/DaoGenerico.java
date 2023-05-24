@@ -4,7 +4,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
-import vp.vp.HibernateUtil;
+import model.HibernateUtil;
 
 public class DaoGenerico<E> {
 	private EntityManager entityManager = HibernateUtil.getEntityManager();
@@ -24,11 +24,10 @@ public class DaoGenerico<E> {
 		return entidadeSalva;
 	}
 	
-	
+	//esse listar trás tudo que existe cadastrado para essa classe
 	public List<E> listar(Class<E> entidade){
 		EntityTransaction transaction = entityManager.getTransaction();
 		transaction.begin();
-		@SuppressWarnings("unchecked")
 		List<E> lista = entityManager.createQuery("from "+entidade.getName()).getResultList();
 		transaction.commit();
 		return lista;
@@ -41,4 +40,7 @@ public class DaoGenerico<E> {
 		transaction.commit();
 	}
 	
+	public EntityManager getEntityManager() {
+		return entityManager;
+	}
 }

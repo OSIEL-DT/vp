@@ -1,4 +1,4 @@
-package vp.vp;
+package model;
 
 import java.util.Objects;
 
@@ -16,6 +16,7 @@ public class Form_pagamentos {
 	private int transferencias_ted;
 	@Column(nullable = false)
 	private int pix;
+	
 	
 	
 	@Override

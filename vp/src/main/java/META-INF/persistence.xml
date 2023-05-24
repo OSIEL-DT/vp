@@ -4,14 +4,14 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
 	<persistence-unit name="vp">
-		<class>vp.vp.Aluguel_produtos</class>
-		<class>vp.vp.Empresa</class>
-		<class>vp.vp.Endereco</class>
-		<class>vp.vp.Form_pagamentos</class>
-		<class>vp.vp.Pessoa_fisica</class>
-		<class>vp.vp.Pessoa_juridica</class>
-		<class>vp.vp.Produtos</class>
-		<class>vp.vp.Recibo</class>
+		<class>model.Aluguel_produtos</class>
+		<class>model.Empresa</class>
+		<class>model.Endereco</class>
+		<class>model.Form_pagamentos</class>
+		<class>model.Pessoa_fisica</class>
+		<class>model.Pessoa_juridica</class>
+		<class>model.Produtos</class>
+		<class>model.Recibo</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver"
 				value="com.mysql.cj.jdbc.Driver" />

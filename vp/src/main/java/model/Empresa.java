@@ -1,4 +1,4 @@
-package vp.vp;
+package model;
 
 import java.util.Objects;
 import javax.persistence.*;

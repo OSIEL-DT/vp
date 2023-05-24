@@ -1,4 +1,4 @@
-package vp.vp;
+package model;
 
 import java.util.Objects;
 import javax.persistence.*;
@@ -19,7 +19,9 @@ public class Aluguel_produtos {
 	
 	@Column(nullable = false)
 	private int valor;
-
+	
+	
+	
 	@Override
 	public String toString() {
 		return "Aluguel_produtos [cod=" + cod + ", data_retirada=" + data_retirada + ", data_entrega=" + data_entrega
