@@ -28,7 +28,20 @@ public class Aluguel_produtos {
 	@OneToMany(mappedBy = "aluguel_produtos", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE, orphanRemoval = true)
 	private List<Endereco> endereco = new ArrayList<Endereco>();
 	
+	@OneToMany(mappedBy = "aluguel_produtos", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE, orphanRemoval = true)
+	private List<Form_pagamentos> Form_pagamentos = new ArrayList<Form_pagamentos>();
 	
+	@OneToMany(mappedBy = "aluguel_produtos", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE, orphanRemoval = true)
+	private List<Pessoa_fisica> pessoa_fisica = new ArrayList<Pessoa_fisica>();
+	
+	@OneToMany(mappedBy = "aluguel_produtos", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE, orphanRemoval = true)
+	private List<Pessoa_juridica> pessoa_juridica = new ArrayList<Pessoa_juridica>();
+	
+	@OneToMany(mappedBy = "aluguel_produtos", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE, orphanRemoval = true)
+	private List<Produtos> produtos = new ArrayList<Produtos>();
+	
+	@OneToMany(mappedBy = "aluguel_produtos", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE, orphanRemoval = true)
+	private List<Recibo> recibo = new ArrayList<Recibo>();
 	
 	@Override
 	public String toString() {
